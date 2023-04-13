@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Textform() {
+export default function Textform(props) {
     //               text is  value and useState is method    (and)     useState is use for updating text value
     const [text, setText] = useState("");
 
@@ -13,22 +13,26 @@ export default function Textform() {
     const textInUpperCase = () => {
         let newText = text.toUpperCase();
         setText(newText);
+        props.showalert('success', 'upercase sentence changed');
     }
 
     // sentence change in lower form 
     const textInLowerCase = () => {
         let newText = text.toLowerCase();
         setText(newText);
+        props.showalert('success', 'lowercase sentence changed');
     }
 
     // clean all 
     const textInCleanCase = () => {
         setText("");
+        props.showalert('success', 'cleared sentence');
     }
     // first word of sentence be capital 
     const firstWord = () => {
         let properForm = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
         setText(properForm);
+        props.showalert('success', 'first word changed');
     }
     // all words in capital letter 
     function allWordCap() {
@@ -38,6 +42,7 @@ export default function Textform() {
             element = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
             temp = temp + " " + element;
             setText(temp);
+            props.showalert('success', 'all words changed');
         })
 
     }
@@ -46,18 +51,21 @@ export default function Textform() {
     function boldText() {
         let boldValue = document.querySelector("#boldSize").value;
         document.querySelector("#getText").style.fontWeight = boldValue;
+        props.showalert('success', 'text bold changed');
 
     }
 
     // change font style 
     function italicText() {
         document.querySelector("#getText").style.fontStyle = "italic";
+        props.showalert('success', 'text italic changed');
 
     }
 
     // add underline 
     function underlineText() {
         document.querySelector("#getText").style.textDecoration = "underline";
+        props.showalert('success', 'text underline changed');
 
     }
 
@@ -66,6 +74,7 @@ export default function Textform() {
     function colorChange() {
         var colorNam = document.querySelector("#colorValue").value;
         document.querySelector("#getText").style.color = colorNam;
+        props.showalert('success', 'text color changed');
     }
 
     // count words 
@@ -80,6 +89,7 @@ export default function Textform() {
             }
         }
         alert(count)
+        props.showalert('success', 'count words changed');
     }
 
     // dropdown text editing button 
@@ -95,7 +105,7 @@ export default function Textform() {
     return (
         // jsx in return 
         <>
-            <div className="mb-3 container">
+            <div className="mb-3 container"style={{backgroundColor:props.mode === 'dark'?'black':'white', color:props.mode === 'dark'?'white':'black'}}>
                 {/* header part design */}
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "end" }}>
                     <div>
@@ -156,7 +166,7 @@ export default function Textform() {
             </div>
             {/* your text summary  */}
             <div>
-                <h2>Your text Summary</h2>
+                <h2 style={{backgroundColor:props.mode === 'dark'?'black':'white', color:props.mode === 'dark'?'white':'black'}}>Your text Summary</h2>
             </div>
         </>)
 }
