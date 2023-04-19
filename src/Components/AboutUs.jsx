@@ -12,7 +12,7 @@ export default function AboutUs() {
         }
         else{
             setstyle({color:"white",backgroundColor:"black"})
-        }
+        }  
     }
 
 

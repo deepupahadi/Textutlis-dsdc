@@ -166,7 +166,9 @@ export default function Textform(props) {
             </div>
             {/* your text summary  */}
             <div>
-                <h2 style={{backgroundColor:props.mode === 'dark'?'black':'white', color:props.mode === 'dark'?'white':'black'}}>Your text Summary</h2>
+                <h2 style={{backgroundColor:props.mode === 'dark'?'black':'white', color:props.mode === 'dark'?'white':'black'}}>Your text Summar
+                </h2>
+                <p>{text}</p>
             </div>
         </>)
 }

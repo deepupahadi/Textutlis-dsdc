@@ -1,9 +1,13 @@
 import Navbar from './Components/Navbar';
 import From from './Components/From';
-// import AboutUs from './Components/AboutUs';
+import AboutUs from './Components/AboutUs';
 import Alert from './Components/Alert';
+import Contact from './Components/Contact';
 
 import { useState } from 'react';
+
+// import { BrowserRouter, Route,  Routes,} from "react-router-dom";
+
 function App() {
   const [mode, setMode] = useState('light')
   // alert............
@@ -32,13 +36,17 @@ function App() {
 
   return (
     <>
+    {/* <BrowserRouter> */}
      <Navbar mode={mode} handleMode={handleMode}  title = "Deepu Vlogs" abouttext ="About Volgs" />
      <Alert alert={alert}></Alert>
-   
-   
-    <From mode={mode} showalert={showalert}/>
-    {/* <AboutUs></AboutUs> */}
-  
+   {/* <Routes> */}
+   {/* <Route path='/' element={<From showalert={showalert}mode={mode} />}
+   />
+    <Route path='/about' element={<AboutUs />}/>
+    <Route path='/contact' element={<Contact />}/> */}
+ <From></From>
+    {/* </Routes>
+  </BrowserRouter> */}
     </>
   );
 }
