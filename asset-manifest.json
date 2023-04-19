@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Textutlis-dsdc/static/css/main.31d6cfe0.css",
+    "main.js": "/Textutlis-dsdc/static/js/main.66aa4e44.js",
+    "static/js/787.84097b25.chunk.js": "/Textutlis-dsdc/static/js/787.84097b25.chunk.js",
+    "static/media/fav.png": "/Textutlis-dsdc/static/media/fav.527d6893311b5acdc6d8.png",
+    "index.html": "/Textutlis-dsdc/index.html",
+    "main.66aa4e44.js.map": "/Textutlis-dsdc/static/js/main.66aa4e44.js.map",
+    "787.84097b25.chunk.js.map": "/Textutlis-dsdc/static/js/787.84097b25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.66aa4e44.js"
+  ]
+}
